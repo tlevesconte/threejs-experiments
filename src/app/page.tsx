@@ -5,10 +5,10 @@ import AsciiTorus from "./_components/3D/AsciiTorus";
 
 export default function Home() {
   return (
-    <main className="grid grid-cols-2 w-screen h-screen items-center">
+    <main className="grid grid-cols-1 sm:grid-cols-2">
         {/* Icosahedron Displacment (Grid Item 1) */}
         <figure className="flex items-center flex-col">
-          <div className="h-full max-h-[400px] min-h-[400px] max-w-[900px] w-full rounded border object-cover shadow-lg">
+          <div className="h-full max-h-[400px] min-h-[400px] w-full rounded border object-cover shadow-lg">
             <Canvas camera={{ position: [0.0, 0.0, 8.0] }}>
               <IcosahedronDisplacement />
             </Canvas>
@@ -29,7 +29,7 @@ export default function Home() {
 
         {/* Ascii Torus (Grid Item 2) */}
         <figure className="flex items-center flex-col">
-          <div className="h-full max-h-[400px] min-h-[400px] max-w-[900px] w-full rounded border bg-[#111111] object-cover shadow-lg">
+          <div className="h-full max-h-[400px] min-h-[400px] w-full rounded border bg-[#111111] object-cover shadow-lg">
             <Canvas>
               <pointLight position={[4, 3, 3]} intensity={20.0} />
               <AsciiTorus />
